@@ -18,7 +18,6 @@ module LinearSDK
   end
 end
 
-
 # LinearSDK::Client.create_operation(
 #   LinearSDK::Mutations::IssueCreateMutation,
 #   variables: {

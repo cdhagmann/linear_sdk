@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby "2.7.6"
+
 # Specify your gem's dependencies in linear_sdk.gemspec
 gemspec
 
