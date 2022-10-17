@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe LinearSdk do
+RSpec.describe LinearSDK do
   it "has a version number" do
-    expect(LinearSdk::VERSION).not_to be nil
+    expect(LinearSDK::VERSION).not_to be nil
   end
 
   it "does something useful" do
