@@ -2,10 +2,20 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "linear"
-
+require "stringio"
+require "lockbox"
 require "pry"
 require "awesome_print"
+
+require "linear"
+
+key = File.read("config/master.key")&.strip
+lockbox = Lockbox.new(key: key, encode: true)
+encrypted_api_key = File.read("config/api.key")&.strip
+
+Linear.configure do |config|
+  config.api_key = lockbox.decrypt(encrypted_api_key)
+end
 
 AwesomePrint.pry!
 Pry.start

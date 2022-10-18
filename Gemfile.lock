@@ -39,6 +39,7 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.6.2)
+    lockbox (1.1.0)
     method_source (1.0.0)
     minitest (5.16.3)
     parallel (1.22.1)
@@ -96,6 +97,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   linear_sdk!
+  lockbox
   pry
   rake (~> 13.0)
   rspec (~> 3.0)
