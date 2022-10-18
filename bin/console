@@ -2,8 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "linear_sdk"
-
+require "linear"
 
 require "pry"
 require "awesome_print"

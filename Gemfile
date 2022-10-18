@@ -2,9 +2,9 @@
 
 source "https://rubygems.org"
 
-ruby "2.7.6"
+ruby "3.1.2"
 
-# Specify your gem's dependencies in linear_sdk.gemspec
+# Specify your gem's dependencies in linear.gemspec
 gemspec
 
 gem "rake", "~> 13.0"
