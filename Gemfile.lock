@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     linear_sdk (0.1.0)
+      activesupport
       dry-configurable
       graphlient
       graphql-client

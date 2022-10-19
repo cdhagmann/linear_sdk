@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 require "dry-configurable"
+require "singleton"
+
+require_relative "linear/version"
+require_relative "linear/client"
 
 module Linear
   extend Dry::Configurable
@@ -14,7 +18,10 @@ module Linear
   setting(
     :api_key,
     default: -"",
-    reader: true
+    reader: true,
+    constructor: ->(value) do
+      value.tap { Linear::Client.reload! }
+    end
   )
 
   setting(
@@ -42,6 +49,7 @@ module Linear
   )
 end
 
-require_relative "linear/version"
-require_relative "linear/client"
 require_relative "linear/schema"
+
+require_relative "linear/viewer"
+require_relative "linear/team"

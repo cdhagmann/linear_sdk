@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "dry-configurable"
   spec.add_dependency "graphlient"
   spec.add_dependency "graphql-client"
+  spec.add_dependency "activesupport"
 
   spec.add_development_dependency "awesome_print"
   spec.add_development_dependency "pry"
