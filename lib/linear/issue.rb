@@ -103,31 +103,25 @@ module Linear
         }
       GRAPHQL
     end
-
-    def issues
-      Linear::Client.query(query).data.team.issues.nodes.map do |node|
-        Linear::Issue.new(node.id)
-      end
-    end
   end
 end
 
-keys = Linear::Team.all.first.foo.data.team.issues.nodes.first.inspect.split[1..]
+# keys = Linear::Team.all.first.foo.data.team.issues.nodes.first.inspect.split[1..]
 
-buffer = ""
-attributes = []
+# buffer = ""
+# attributes = []
 
-keys.select { |key| key.include?("=") }.map{ |key| key.split("=").first }
-  buffer += key
-  if key.include?("=")
-    buffer.split("=")
+# keys.select { |key| key.include?("=") }.map{ |key| key.split("=").first }
+#   buffer += key
+#   if key.include?("=")
+#     buffer.split("=")
 
-  end
+#   end
 
-end
+# end
 
-  def attributes(object)
-    object.inspect.split
-      .select { |key| key.include?("=") }
-      .map{ |key| key.split("=").first.underscore }
-  end
+#   def attributes(object)
+#     object.inspect.split
+#       .select { |key| key.include?("=") }
+#       .map{ |key| key.split("=").first.underscore }
+#   end
